@@ -1,0 +1,20 @@
+<!-- templates/registration/logout_confirmation.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Confirmar cierre de sesión</title>
+</head>
+
+<body>
+    <h2>Confirmar cierre de sesión</h2>
+    
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Sí, cerrar sesión</button>
+    </form>
+    
+    <a href="/">Cancelar</a>
+</body>
+
+</html>
